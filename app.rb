@@ -1,5 +1,7 @@
 require 'sinatra'
+require 'dotenv'
+Dotenv.load
 
 get '/' do
-  "Hello!"
+  "The Secret Codeword is: #{ENV["PASSWORD"]}"
 end
